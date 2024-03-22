@@ -3,8 +3,8 @@ import os
 
 template_dir = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 template_dir = os.path.join(template_dir, 'TrabalhoESOF')
+template_dir = os.path.join(template_dir, 'server')
 template_dir = os.path.join(template_dir, 'static')
-template_dir = os.path.join(template_dir, 'frontend')
 template_dir = os.path.join(template_dir, 'templates')
 
 app = Flask("_name_", template_folder=template_dir)
