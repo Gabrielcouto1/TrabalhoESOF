@@ -11,7 +11,17 @@ app = Flask("_name_", template_folder=template_dir)
 
 @app.route("/")
 def index():
-    return render_template("landing_page.html")
+    return render_template("index.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+# pra adicionar uma nova rota
+# @app.route("/NOME DA ROTA")
+# def NOME DA FUNCAO():
+#     return render_template("NOME DO ARQUIVO.html")
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
