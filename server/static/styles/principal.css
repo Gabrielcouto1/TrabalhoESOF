@@ -45,8 +45,10 @@ body {
 }
 
 .barrinha .conteudo {
-    padding: 10px;
-    display: none; /* Oculta o conteúdo por padrão */
+    padding: 5px;
+    display: none;
+    font-size: 30px;
+    left: 60px;
 }
 
 .barrinha .conteudo.aberto {
@@ -55,11 +57,11 @@ body {
 
 .seta {
     display: inline-block;
-    width: 0;
+    width: 10px;
     height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid black;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #113f67;
     transform: rotate(-90deg); /* Define a rotação inicial para apontar para a direita */
 }
 
@@ -68,3 +70,8 @@ body {
 }
 
 
+.Titulo_produto {
+    /* font-size: 40px; Tamanho da fonte do título do produto */
+    font-weight: bold; /* Peso da fonte */
+    color: #113f67; /* Cor do texto */
+}
