@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #38598b;
+    font-family: Arial, sans-serif;
+}
+
+#profile {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#greeting {
+    position: fixed;
+    top: 30px; 
+    left: 90px; 
+    font-size: 24px; 
+    color: #e7eaf6; 
+}
+
+.barrinha {
+    position: fixed;
+    top: 100px; 
+    left: 40px; 
+    font-size: 60px; 
+    color: #e7eaf6;
+    margin-left: 20px; /* Espaçamento entre o título "Scrum" e a barrinha */
+}
+
+.barrinha .barrinha-toggle {
+    cursor: pointer;
+    padding: 10px;
+    background-color:#38598b;
+}
+
+.barrinha .conteudo {
+    padding: 10px;
+    display: none; /* Oculta o conteúdo por padrão */
+}
+
+.barrinha .conteudo.aberto {
+    display: block; /* Exibe o conteúdo quando a barrinha está aberta */
+}
+
+.seta {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+    transform: rotate(-90deg); /* Define a rotação inicial para apontar para a direita */
+}
+
+.aberto .seta {
+    transform: rotate(0deg); /* Altera a rotação para apontar para baixo quando a barrinha está aberta */
+}
+
+

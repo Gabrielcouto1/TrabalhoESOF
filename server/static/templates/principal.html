@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Scrum2</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/principal.css') }}">  
+</head>
+<body>
+    <div id="profile">
+        <img src="{{ url_for('static',filename='assets/foto.png') }}" alt="Foto do perfil">
+    </div>
+    <div id="greeting">
+        Olá, Ana!😊
+    </div>
+
+    <div class="barrinha">
+        <div class="barrinha-toggle" onclick="toggleBarrinha()">
+          <span class="seta"></span>
+          <span class="titulo">Scrum</span> <!-- Título da barrinha -->
+        </div>
+        <div class="conteudo">
+          <!-- Conteúdo da barrinha aqui -->
+          <p>Conteúdo da barrinha aqui...</p>
+        </div>
+      </div>
+      
+    <script>
+        function toggleBarrinha() {
+          var barrinhaConteudo = document.querySelector('.barrinha .conteudo');
+          var seta = document.querySelector('.barrinha .seta');
+        
+          barrinhaConteudo.classList.toggle('aberto');
+          seta.classList.toggle('aberto');
+        }
+    </script>
+</body>
+</html>

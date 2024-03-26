@@ -1,16 +1,16 @@
 h1{
-    font-size: 60;
+    font-size: 80;
+    font-family: 'Dancing Script', cursive;
+    color :#e7eaf6;
 }
+
 
 body{
     display: flex;
-    width: 100%;
+    width: 95%;
     height: 100vh;
     justify-content: center;
     align-items:center;
-    background-color: #385170;
+    background-color: #38598b;
 }
 
-h1{
-    
-}

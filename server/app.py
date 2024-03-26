@@ -17,6 +17,11 @@ def index():
 def login():
     return render_template("login.html")
 
+@app.route("/principal")
+def principal():
+    return render_template("principal.html")
+
+
 # pra adicionar uma nova rota
 # @app.route("/NOME DA ROTA")
 # def NOME DA FUNCAO():
