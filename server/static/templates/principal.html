@@ -22,16 +22,41 @@
         <div class="conteudo">
           <!-- Conteúdo da barrinha aqui -->
           <h2 class="Titulo_produto">Produto Atual:</h2>
-          <h3>Backlog da Sprint:  </h3>
+          <button class="botao_daily" onclick="handleDailyClick()">Daily</button>
+          <h3>Backlog do Produto:  </h3>
           
           <p>Lorem ipsum dolor sit amet. Qui fugit minus et aperiam distinctio vel voluptates dolorum! Id dolorem facere sed eius consectetur et consequuntur unde et exercitationem omnis. Non voluptatibus optio eum reprehenderit ullam ad incidunt mollitia eum adipisci quod.
             
             Aut unde porro eos dolores velit aut excepturi ipsa? Sit veniam veritatis ea nobis asperiores aut consequatur atque est omnis cumque qui odit praesentium At accusamus nesciunt. Est obcaecati nisi aut autem nihil ut harum placeat. Qui dolores velit et impedit quasi cum odit corrupti est sunt nemo et voluptatem labore a unde nihil.</p>
           
+            <h3>Dono do Produto: Maria</h3>
+            <h3>Scrum master: José</h3>
+            <h3>Devs: Leo, Mia, Luca, Eva, Max e Zoe</h3>
             <h3>Sprint: 2</h3>
             <h3>Data de Inicio: 02/03</h3>
             <h3>Data Final: 02/04</h3>
-           
+            <h3>Backlog da Sprint:  </h3>
+          
+            <p>Lorem ipsum dolor sit amet. Qui fugit minus et aperiam distinctio vel voluptates dolorum! Id dolorem facere sed eius consectetur et consequuntur unde et exercitationem omnis. Non voluptatibus optio eum reprehenderit ullam ad incidunt mollitia eum adipisci quod.
+              
+              Aut unde porro eos dolores velit aut excepturi ipsa? Sit veniam veritatis ea nobis asperiores aut consequatur atque est omnis cumque qui odit praesentium At accusamus nesciunt. Est obcaecati nisi aut autem nihil ut harum placeat. Qui dolores velit et impedit quasi cum odit corrupti est sunt nemo et voluptatem labore a unde nihil.</p>
+            
+            <h3>Relatórios:</h3>
+            <button class="botao_daily" onclick="window.location.href='novo_relatorio.html'">Cadastrar Novo Relatório</button>
+            <br>
+            <br>
+            <button class="botao_daily" onclick="window.location.href='relatorio1.html'">Relatório 1</button>
+            <button class="botao_daily" onclick="window.location.href='relatorio2.html'">Relatório 2</button>
+            <button class="botao_daily" onclick="window.location.href='relatorio3.html'">Relatório 3</button>
+            <button class="botao_daily" onclick="window.location.href='relatorio4.html'">Relatório 4</button>
+            <button class="botao_daily" onclick="window.location.href='relatorio5.html'">Relatório 5</button>
+            <br>
+            <br>
+            
+            <button class="botao_board" onclick="window.location.href='scrum_board.html'">Scrum Board</button>
+            <button class="botao_board" onclick="window.location.href='grafico_burndown.html'">Gráfico Burndown</button>
+
+
         </div>
       </div>
       
@@ -42,6 +67,9 @@
         
           barrinhaConteudo.classList.toggle('aberto');
           seta.classList.toggle('aberto');
+
+          var barrinhaOffset = document.getElementById('barrinha').offsetTop;
+          window.scrollTo({ top: barrinhaOffset, behavior: 'smooth' });
         }
     </script>
 </body>

@@ -47,8 +47,8 @@ body {
 .barrinha .conteudo {
     padding: 5px;
     display: none;
-    font-size: 30px;
-    left: 60px;
+    font-size: 20px;
+    left: 80px;
 }
 
 .barrinha .conteudo.aberto {
@@ -75,3 +75,35 @@ body {
     font-weight: bold; /* Peso da fonte */
     color: #113f67; /* Cor do texto */
 }
+
+
+.botao_daily,
+.botao_relatorio {
+    background-color: #113f67;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Espaçamento entre os botões */
+}
+
+.botao_daily:hover,
+.botao_relatorio:hover {
+    background-color: #0c2a48;
+}
+
+.botao_board{
+    background-color: rgb(37, 138, 151);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: center; 
+}
+
+
