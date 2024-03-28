@@ -20,9 +20,9 @@
           <span class="titulo">Scrum</span> <!-- Título da barrinha -->
         </div>
         <div class="conteudo">
-          <!-- Conteúdo da barrinha aqui -->
           <button class="botao_board" onclick="window.location.href='scrum_board.html'">Cadastrar novo produto</button>
-
+          <br> <br>
+          <button class="botao_board" onclick="window.location.href='scrum_board.html'">Scrum Board</button>
           <h2 class="Titulo_produto">Produto Atual:</h2>
           <button class="botao_daily" onclick="handleDailyClick()">Daily</button>
           <h3>Backlog do Produto:  </h3>
@@ -54,10 +54,10 @@
             <button class="botao_daily" onclick="window.location.href='relatorio5.html'">Relatório 5</button>
             <br>
             <br>
-            
-            <button class="botao_board" onclick="window.location.href='scrum_board.html'">Scrum Board</button>
-            <button class="botao_board" onclick="window.location.href='grafico_burndown.html'">Gráfico Burndown</button>
-
+            <h3>Gráfico BurnDown: </h3>
+            <div class="grafico">
+              <img src="{{ url_for('static',filename='assets/grafico.jpeg') }}" alt="Grafico" >
+            </div>
 
         </div>
       </div>

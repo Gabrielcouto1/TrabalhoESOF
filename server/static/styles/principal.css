@@ -35,7 +35,7 @@ body {
     left: 40px; 
     font-size: 60px; 
     color: #e7eaf6;
-    margin-left: 20px; /* Espaçamento entre o título "Scrum" e a barrinha */
+    margin-left: 20px; 
 }
 
 .barrinha .barrinha-toggle {
@@ -52,7 +52,7 @@ body {
 }
 
 .barrinha .conteudo.aberto {
-    display: block; /* Exibe o conteúdo quando a barrinha está aberta */
+    display: block; 
 }
 
 .seta {
@@ -62,18 +62,18 @@ body {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid #113f67;
-    transform: rotate(-90deg); /* Define a rotação inicial para apontar para a direita */
+    transform: rotate(-90deg); 
 }
 
 .aberto .seta {
-    transform: rotate(0deg); /* Altera a rotação para apontar para baixo quando a barrinha está aberta */
+    transform: rotate(0deg); 
 }
 
 
 .Titulo_produto {
     /* font-size: 40px; Tamanho da fonte do título do produto */
-    font-weight: bold; /* Peso da fonte */
-    color: #113f67; /* Cor do texto */
+    font-weight: bold; 
+    color: #113f67; 
 }
 
 
@@ -86,7 +86,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px; /* Espaçamento entre os botões */
+    margin-right: 10px; 
 }
 
 .botao_daily:hover,
@@ -106,4 +106,8 @@ body {
     text-align: center; 
 }
 
-
+.grafico img {
+    width: 300%;
+    height: auto; 
+    max-width: 2000px; 
+}
