@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Scrum2</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/novoProduto.css') }}">  
+</head>
+<body>
+    <div id="profile">
+        <img src="{{ url_for('static',filename='assets/foto.png') }}" alt="Foto do perfil">
+    </div>
+    <div id="greeting">
+        Olá, Ana!😊
+    </div>
+
+    <form action="processar_formulario.php" method="POST">
+        <label for="nome_produto">Nome do Produto:</label><br>
+        <input type="text" id="nome_produto" name="nome_produto"><br><br>
+
+        <label for="scrum_master">Scrum Master:</label><br>
+        <input type="text" id="scrum_master" name="scrum_master"><br><br>
+
+        <label for="dono_produto">Dono do Produto:</label><br>
+        <input type="text" id="dono_produto" name="dono_produto"><br><br>
+
+        <label for="backlog_sprint">Backlog da Sprint:</label><br>
+        <textarea id="backlog_sprint" name="backlog_sprint" rows="4" cols="50"></textarea><br><br>
+
+        <label for="devs">Devs:</label><br>
+        <input type="text" id="devs" name="devs"><br><br>
+
+        <label for="dataInicio">Data de Início:</label><br>
+        <input type="text" id="dataInicio" name="dataInicio"><br><br>
+
+        <label for="dataFim">Data Final:</label><br>
+        <input type="text" id="dataFim" name="dataFim"><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    </div>
+      
+    <script>
+        
+    </script>
+</body>
+</html>

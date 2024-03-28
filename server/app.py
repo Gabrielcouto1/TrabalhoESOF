@@ -21,6 +21,10 @@ def login():
 def principal():
     return render_template("principal.html")
 
+@app.route("/novoProduto")
+def novoProduto():
+    return render_template("novoProduto.html")
+
 
 # pra adicionar uma nova rota
 # @app.route("/NOME DA ROTA")
