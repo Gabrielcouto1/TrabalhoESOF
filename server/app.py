@@ -25,6 +25,10 @@ def principal():
 def novoProduto():
     return render_template("novoProduto.html")
 
+@app.route("/scrumBoard")
+def scrumBoard():
+    return render_template("scrumBoard.html")
+
 
 # pra adicionar uma nova rota
 # @app.route("/NOME DA ROTA")

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Scrum2</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/scrumBoard.css') }}">  
+</head>
+<body>
+    <div id="profile">
+        <img src="{{ url_for('static',filename='assets/foto.png') }}" alt="Foto do perfil">
+    </div>
+    <div id="greeting">
+        Olá, Ana!😊
+        <h1>Scrum board</h1>
+
+        <div class="kanban-board">
+            <div class="column">
+                <h2>To Do</h2>
+                <div class="card">Tarefa 1</div>
+                <div class="card">Tarefa 2</div>
+                <div class="card">Tarefa 3</div>
+            </div>
+            <div class="column">
+                <h2>Em Progresso</h2>
+            </div>
+            <div class="column">
+                <h2>Finalizados</h2>
+            </div>
+        </div>
+</body>
+</html>
