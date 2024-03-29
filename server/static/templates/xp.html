@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Scrum2</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/xp.css') }}">  
+</head>
+<body>
+    <div id="profile">
+        <img src="{{ url_for('static',filename='assets/foto.png') }}" alt="Foto do perfil">
+    </div>
+    <div id="greeting">
+        Olá, Ana!😊
+    </div>
+    <div class="conteudo">
+
+        <button class="botao1" onclick="window.location.href='/novoProduto'">Cadastrar nova release</button>
+        <h2 class="Titulo_produto">Release Atual:</h2>
+        <button class="botao1" onclick="handleDailyClick()">Cadastrar iteração</button>
+        <h2 class="Titulo_produto">Iteracao Atual:</h2>
+        
+        <button class="botao1" onclick="handleDailyClick()">Cadastrar história</button>
+
+        <button class="botao1" onclick="handleDailyClick()">Cadastrar tarefa</button>
+        <h2 class="Titulo_produto">Tarefa Atual:</h2>
+       
+        
+        <h2 class="Relatorios">Relatorios:</h2>
+        <button class="botao2" onclick="handleDailyClick()">Relatório de Releases:</button>
+        <button class="botao2" onclick="handleDailyClick()">Relatório de Sprints- iterações</button>
+        <button class="botao2" onclick="handleDailyClick()">Relatório de Tarefas:</button>
+        <br>
+        <br>
+        <button class="botao1" onclick="window.location.href='/scrumBoard'">Kanban</button>
+    </div> 
+
+    <script>
+        
+        
+    </script>
+</body>
+</html>

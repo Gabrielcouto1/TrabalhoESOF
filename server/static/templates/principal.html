@@ -60,8 +60,19 @@
             </div>
 
         </div>
+    </div>
+      <!-- ---------------------------------------------------------------------- -->
+      <!-- XP -->
+    <div class="barrinha xp">
+      <div class="barrinha-toggle" onclick="toggleXPBarrinha()">
+          <span class="seta"></span>
+          <span class="titulo">XP</span> <!-- Título da barra XP -->
       </div>
-      
+      <div class="conteudo">
+          <!-- Conteúdo da Barra XP -->
+      </div>
+    </div>  
+
     <script>
         function toggleBarrinha() {
           var barrinhaConteudo = document.querySelector('.barrinha .conteudo');
@@ -72,6 +83,18 @@
 
           var barrinhaOffset = document.getElementById('barrinha').offsetTop;
           window.scrollTo({ top: barrinhaOffset, behavior: 'smooth' });
+        }
+
+         // Função para alternar a visibilidade da barra XP
+         function toggleXPBarrinha() {
+            var xpBarrinhaConteudo = document.querySelector('.barrinha.xp .conteudo');
+            var xpSeta = document.querySelector('.barrinha.xp .seta');
+            
+            xpBarrinhaConteudo.classList.toggle('aberto');
+            xpSeta.classList.toggle('aberto');
+            
+            var xpBarrinhaOffset = document.querySelector('.barrinha.xp').offsetTop;
+            window.scrollTo({ top: xpBarrinhaOffset, behavior: 'smooth' });
         }
     </script>
 </body>

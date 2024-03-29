@@ -36,6 +36,7 @@ body {
     font-size: 60px; 
     color: #e7eaf6;
     margin-left: 20px; 
+    z-index: 2;
 }
 
 .barrinha .barrinha-toggle {
@@ -53,6 +54,7 @@ body {
 
 .barrinha .conteudo.aberto {
     display: block; 
+    z-index: 2;
 }
 
 .seta {
@@ -111,3 +113,47 @@ body {
     height: auto; 
     max-width: 2000px; 
 }
+
+/* XP */
+.barrinha.xp {
+    position: fixed;
+    top: 200px; 
+    left: 40px;
+    font-size: 60px;
+    color: #e7eaf6;
+    margin-left: 20px;
+    z-index: 1;
+}
+
+
+.barrinha.xp .barrinha-toggle {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #38598b;
+}
+
+.barrinha.xp .conteudo {
+    padding: 5px;
+    display: none;
+    font-size: 20px;
+    left: 80px;
+}
+
+.barrinha.xp .conteudo.aberto {
+    display: block;
+}
+
+.barrinha.xp .seta {
+    display: inline-block;
+    width: 10px;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #113f67;
+    transform: rotate(-90deg);
+}
+
+.barrinha.xp .aberto .seta {
+    transform: rotate(0deg);
+}
+

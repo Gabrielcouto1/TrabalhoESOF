@@ -29,6 +29,14 @@ def novoProduto():
 def scrumBoard():
     return render_template("scrumBoard.html")
 
+@app.route("/scrum")
+def scrum():
+    return render_template("scrum.html")
+
+@app.route("/xp")
+def xp():
+    return render_template("xp.html")
+
 
 # pra adicionar uma nova rota
 # @app.route("/NOME DA ROTA")
