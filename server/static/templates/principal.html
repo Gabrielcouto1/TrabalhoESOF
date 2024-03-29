@@ -14,88 +14,12 @@
         Olá, Ana!😊
     </div>
 
-    <div class="barrinha">
-        <div class="barrinha-toggle" onclick="toggleBarrinha()">
-          <span class="seta"></span>
-          <span class="titulo">Scrum</span> <!-- Título da barrinha -->
-        </div>
-        <div class="conteudo">
-          <button class="botao_board" onclick="window.location.href='scrum_board.html'">Cadastrar novo produto</button>
-          <br> <br>
-          <button class="botao_board" onclick="window.location.href='scrum_board.html'">Scrum Board</button>
-          <h2 class="Titulo_produto">Produto Atual:</h2>
-          <button class="botao_daily" onclick="handleDailyClick()">Daily</button>
-          <h3>Backlog do Produto:  </h3>
-          
-          <p>Lorem ipsum dolor sit amet. Qui fugit minus et aperiam distinctio vel voluptates dolorum! Id dolorem facere sed eius consectetur et consequuntur unde et exercitationem omnis. Non voluptatibus optio eum reprehenderit ullam ad incidunt mollitia eum adipisci quod.
-            
-            Aut unde porro eos dolores velit aut excepturi ipsa? Sit veniam veritatis ea nobis asperiores aut consequatur atque est omnis cumque qui odit praesentium At accusamus nesciunt. Est obcaecati nisi aut autem nihil ut harum placeat. Qui dolores velit et impedit quasi cum odit corrupti est sunt nemo et voluptatem labore a unde nihil.</p>
-          
-            <h3>Dono do Produto: Maria</h3>
-            <h3>Scrum master: José</h3>
-            <h3>Devs: Leo, Mia, Luca, Eva, Max e Zoe</h3>
-            <h3>Sprint: 2</h3>
-            <h3>Data de Inicio: 02/03</h3>
-            <h3>Data Final: 02/04</h3>
-            <h3>Backlog da Sprint:  </h3>
-          
-            <p>Lorem ipsum dolor sit amet. Qui fugit minus et aperiam distinctio vel voluptates dolorum! Id dolorem facere sed eius consectetur et consequuntur unde et exercitationem omnis. Non voluptatibus optio eum reprehenderit ullam ad incidunt mollitia eum adipisci quod.
-              
-              Aut unde porro eos dolores velit aut excepturi ipsa? Sit veniam veritatis ea nobis asperiores aut consequatur atque est omnis cumque qui odit praesentium At accusamus nesciunt. Est obcaecati nisi aut autem nihil ut harum placeat. Qui dolores velit et impedit quasi cum odit corrupti est sunt nemo et voluptatem labore a unde nihil.</p>
-            
-            <h3>Relatórios:</h3>
-            <button class="botao_daily" onclick="window.location.href='novo_relatorio.html'">Cadastrar Novo Relatório</button>
-            <br>
-            <br>
-            <button class="botao_daily" onclick="window.location.href='relatorio1.html'">Relatório 1</button>
-            <button class="botao_daily" onclick="window.location.href='relatorio2.html'">Relatório 2</button>
-            <button class="botao_daily" onclick="window.location.href='relatorio3.html'">Relatório 3</button>
-            <button class="botao_daily" onclick="window.location.href='relatorio4.html'">Relatório 4</button>
-            <button class="botao_daily" onclick="window.location.href='relatorio5.html'">Relatório 5</button>
-            <br>
-            <br>
-            <h3>Gráfico BurnDown: </h3>
-            <div class="grafico">
-              <img src="{{ url_for('static',filename='assets/grafico.jpeg') }}" alt="Grafico" >
-            </div>
-
-        </div>
+    <div class="botao-container">
+        <button class="botao" onclick="window.location.href='/scrum'">Scrum</button>
+        <button class="botao" onclick="window.location.href='/xp'">XP</button>
     </div>
-      <!-- ---------------------------------------------------------------------- -->
-      <!-- XP -->
-    <div class="barrinha xp">
-      <div class="barrinha-toggle" onclick="toggleXPBarrinha()">
-          <span class="seta"></span>
-          <span class="titulo">XP</span> <!-- Título da barra XP -->
-      </div>
-      <div class="conteudo">
-          <!-- Conteúdo da Barra XP -->
-      </div>
-    </div>  
 
     <script>
-        function toggleBarrinha() {
-          var barrinhaConteudo = document.querySelector('.barrinha .conteudo');
-          var seta = document.querySelector('.barrinha .seta');
-        
-          barrinhaConteudo.classList.toggle('aberto');
-          seta.classList.toggle('aberto');
-
-          var barrinhaOffset = document.getElementById('barrinha').offsetTop;
-          window.scrollTo({ top: barrinhaOffset, behavior: 'smooth' });
-        }
-
-         // Função para alternar a visibilidade da barra XP
-         function toggleXPBarrinha() {
-            var xpBarrinhaConteudo = document.querySelector('.barrinha.xp .conteudo');
-            var xpSeta = document.querySelector('.barrinha.xp .seta');
-            
-            xpBarrinhaConteudo.classList.toggle('aberto');
-            xpSeta.classList.toggle('aberto');
-            
-            var xpBarrinhaOffset = document.querySelector('.barrinha.xp').offsetTop;
-            window.scrollTo({ top: xpBarrinhaOffset, behavior: 'smooth' });
-        }
     </script>
 </body>
 </html>
