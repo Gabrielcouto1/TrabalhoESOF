@@ -1,0 +1,7 @@
+{
+    "users": [
+        {"username": "anabarbaracamposconti@gmail.com", "password": "senhaTeste"},
+        {"username": "admin", "password": "admin"},
+        {"username": "gabrielcoutodefreitas@gmail.com", "password": "senhaTeste"}
+    ]
+}

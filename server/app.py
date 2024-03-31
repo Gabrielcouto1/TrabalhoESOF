@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import os
+import utils
 
 template_dir = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 template_dir = os.path.join(template_dir, 'TrabalhoESOF')
@@ -13,9 +14,12 @@ app = Flask("_name_", template_folder=template_dir)
 def index():
     return render_template("index.html")
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
-    return render_template("login.html")
+    if request.method == "GET":
+        return render_template("login.html")
+    elif request.method == "POST":
+        return utils.check_username(request)
 
 @app.route("/principal")
 def principal():
@@ -37,6 +41,9 @@ def scrum():
 def xp():
     return render_template("xp.html")
 
+@app.route("/novoRelatorio")
+def novoRelatorio():
+    return render_template("novoRelatorio.html")
 
 # pra adicionar uma nova rota
 # @app.route("/NOME DA ROTA")
