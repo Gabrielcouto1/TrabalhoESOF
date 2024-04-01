@@ -1,14 +1,7 @@
 from flask import Flask, request, render_template
-import os
 import utils
 
-template_dir = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-template_dir = os.path.join(template_dir, 'TrabalhoESOF')
-template_dir = os.path.join(template_dir, 'server')
-template_dir = os.path.join(template_dir, 'static')
-template_dir = os.path.join(template_dir, 'templates')
-
-app = Flask("_name_", template_folder=template_dir)
+app = Flask("_name_", template_folder=utils.template_dir)
 
 @app.route("/")
 def index():
@@ -44,12 +37,6 @@ def xp():
 @app.route("/novoRelatorio")
 def novoRelatorio():
     return render_template("novoRelatorio.html")
-
-# pra adicionar uma nova rota
-# @app.route("/NOME DA ROTA")
-# def NOME DA FUNCAO():
-#     return render_template("NOME DO ARQUIVO.html")
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
