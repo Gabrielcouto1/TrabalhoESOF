@@ -1,27 +1,36 @@
 {
     "users": [
-        {"username": "anabarbaracamposconti@gmail.com", "password": "senhaTeste"},
-        {"username": "admin", "password": "admin"},
-        {"username": "gabrielcoutodefreitas@gmail.com", "password": "senhaTeste"}
+        {
+            "username": "anabarbaracamposconti@gmail.com",
+            "password": "senhaTeste"
+        },
+        {
+            "username": "admin",
+            "password": "admin"
+        },
+        {
+            "username": "gabrielcoutodefreitas@gmail.com",
+            "password": "senhaTeste"
+        }
     ],
-    "scrumProducts":[
+    "scrumProducts": [
         {
             "productName": "Scrum 2",
             "scrumMaster": "Gabriel Couto",
-            "productOwner": "Ana Bárbara",
+            "productOwner": "Ana Barbara",
             "sprintBacklog": "Alterar scrum board, arrastar tarefas responsivamente no scrum board",
             "devs": "Guilherme, Isabela",
             "beginDate": "01-04-2024",
             "endDate": "15-04-2024"
         },
         {
-            "productName": "cuidaIdoso Bot",
-            "scrumMaster": "Tiago",
-            "productOwner": "Beatriz",
-            "sprintBacklog": "Tela de cadastro do idoso, tela de cadastro de funcionario, atualizar dados do idoso.",
-            "devs": "Maria, Joao",
-            "beginDate": "09-04-2024",
-            "endDate": "09-05-2024"
+            "productName": "Gerenciamento de Lar de Idosos",
+            "scrumMaster": "Ana Barbara Campos Conti",
+            "productOwner": "Gabriel Couto de Freitas",
+            "sprintBacklog": "Criar modelo relacional para o banco de dados e implementa-lo.",
+            "devs": "Guilherme e Isabela",
+            "beginDate": "03-05-2024",
+            "endDate": "04-06-2024"
         }
     ]
 }

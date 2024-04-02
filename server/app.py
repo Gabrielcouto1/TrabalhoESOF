@@ -12,9 +12,7 @@ def login():
     if request.method == "GET":
         return render_template("login.html")
     elif request.method == "POST":
-        print(request)
-        print(request.form)
-        return jsonify({'message': 'Form data received successfully'}), 200
+        return utils.fazLogin(request)
             
         
 
@@ -27,7 +25,7 @@ def novoProduto():
     if request.method == "GET":
         return render_template("novoProduto.html")
     elif request.method == "POST":
-        utils.cadastraProduto(request)
+        return utils.cadastraProduto(request)
 
 @app.route("/scrumBoard")
 def scrumBoard():

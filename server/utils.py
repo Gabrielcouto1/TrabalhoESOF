@@ -9,14 +9,15 @@ template_dir = os.path.join(template_dir, 'static')
 template_dir = os.path.join(template_dir, 'templates')
 
 def load_data():
-    with open('data/database.json', 'r') as file:
+    with open('data/database.json', 'r', encoding='utf8') as file:
         data = json.load(file)
     return data
 
-def fazLogin(request):
-    data = load_data()
-    raw_data = str(request.form)
+def save_data(data):
+    with open('data/database.json', 'w', encoding='utf8') as file:
+        json.dump(data, file, indent=4)
 
+def format_form(raw_data):
     username_start = raw_data.find('username') + len('username') + 3
     username_end = raw_data.find('------', username_start) - 4
     username = raw_data[username_start:username_end]
@@ -28,6 +29,13 @@ def fazLogin(request):
     username = username.replace("\\n\\r\\n", "")
     password = password.replace("\\n\\r\\n", "")
 
+    return [username,password]
+     
+def fazLogin(request):
+    data = load_data()
+
+    username, password = format_form(str(request.form))
+
     for user in data['users']:
         if user['username'] == username and user['password'] == password:
                 return jsonify({'exists': True}), 200
@@ -35,20 +43,20 @@ def fazLogin(request):
     return jsonify({'exists': False}), 200
 
 def cadastraProduto(request):
-    nome_produto = request.form.get('nome_produto')
-    scrum_master = request.form.get('scrum_master')
-    dono_produto = request.form.get('dono_produto')
-    backlog_sprint = request.form.get('backlog_sprint')
-    devs = request.form.get('devs')
-    dataInicio = request.form.get('dataInicio')
-    dataFim = request.form.get('dataFim')
+    data = load_data()
 
-    print('Nome do Produto:', nome_produto)
-    print('Scrum Master:', scrum_master)
-    print('Dono do Produto:', dono_produto)
-    print('Backlog da Sprint:', backlog_sprint)
-    print('Devs:', devs)
-    print('Data de Início:', dataInicio)
-    print('Data Final:', dataFim)
+    newProduct ={
+        "productName": request.form.get('nome_produto'),
+        "scrumMaster": request.form.get('scrum_master'),
+        "productOwner": request.form.get('dono_produto'),
+        "sprintBacklog": request.form.get('backlog_sprint'),
+        "devs": request.form.get('devs'),
+        "beginDate": request.form.get('dataInicio'),
+        "endDate": request.form.get('dataFim')
+    }
+
+    data['scrumProducts'].append(newProduct)
+    save_data(data)
 
     return jsonify({'message': True}), 200
+
