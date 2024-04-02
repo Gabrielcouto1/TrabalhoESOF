@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import utils
 
 app = Flask("_name_", template_folder=utils.template_dir)
@@ -12,15 +12,22 @@ def login():
     if request.method == "GET":
         return render_template("login.html")
     elif request.method == "POST":
-        return utils.check_username(request)
+        print(request)
+        print(request.form)
+        return jsonify({'message': 'Form data received successfully'}), 200
+            
+        
 
 @app.route("/principal")
 def principal():
     return render_template("principal.html")
 
-@app.route("/novoProduto")
+@app.route("/novoProduto", methods=['GET', 'POST'])
 def novoProduto():
-    return render_template("novoProduto.html")
+    if request.method == "GET":
+        return render_template("novoProduto.html")
+    elif request.method == "POST":
+        utils.cadastraProduto(request)
 
 @app.route("/scrumBoard")
 def scrumBoard():

@@ -13,7 +13,7 @@ def load_data():
         data = json.load(file)
     return data
 
-def check_username(request):
+def fazLogin(request):
     data = load_data()
     raw_data = str(request.form)
 
@@ -34,3 +34,21 @@ def check_username(request):
 
     return jsonify({'exists': False}), 200
 
+def cadastraProduto(request):
+    nome_produto = request.form.get('nome_produto')
+    scrum_master = request.form.get('scrum_master')
+    dono_produto = request.form.get('dono_produto')
+    backlog_sprint = request.form.get('backlog_sprint')
+    devs = request.form.get('devs')
+    dataInicio = request.form.get('dataInicio')
+    dataFim = request.form.get('dataFim')
+
+    print('Nome do Produto:', nome_produto)
+    print('Scrum Master:', scrum_master)
+    print('Dono do Produto:', dono_produto)
+    print('Backlog da Sprint:', backlog_sprint)
+    print('Devs:', devs)
+    print('Data de Início:', dataInicio)
+    print('Data Final:', dataFim)
+
+    return jsonify({'message': True}), 200

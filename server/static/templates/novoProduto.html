@@ -14,7 +14,7 @@
         Olá, Ana!😊
     </div>
 
-    <form action="processar_formulario.php" method="POST">
+    <form action="/novoProduto" method="POST" enctype="multipart/form-data">
         <label for="nome_produto">Nome do Produto:</label><br>
         <input type="text" id="nome_produto" name="nome_produto"><br><br>
 
@@ -41,7 +41,27 @@
     </div>
       
     <script>
-        
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+    
+                var formData = new FormData(this);
+    
+                var xhr = new XMLHttpRequest();
+    
+                xhr.open('POST', '/novoProduto', true);
+    
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        window.location.href = '/scrum';
+                    } else {
+                        alert('Error: ' + xhr.status);
+                    }
+                };
+    
+                xhr.send(formData);
+            });
+        });
     </script>
 </body>
 </html>

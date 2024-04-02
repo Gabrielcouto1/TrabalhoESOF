@@ -58,11 +58,9 @@
                   if (xhr.status === 200) {
                       var response = JSON.parse(xhr.responseText);
                       if (!response.exists) {
-                          // Show an alert message or manipulate DOM to display a message
                           document.getElementById('error-message').innerText = 'Invalid username or password';
                       } else {
-                          // Redirect to another page or perform further actions
-                          window.location.href = '/principal'; // Example: redirect to dashboard
+                          window.location.href = '/principal'; 
                       }
                   } else {
                       alert('Error: ' + xhr.status);
