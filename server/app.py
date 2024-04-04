@@ -60,5 +60,9 @@ def novoHistoria():
 def novoTarefa():
     return render_template("novoTarefa.html")
 
+@app.route("/kanban")
+def kanban():
+    return render_template("kanban.html")
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
