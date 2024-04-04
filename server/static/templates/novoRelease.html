@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Cadastrar Release</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/novoProduto.css') }}">  
+</head>
+<body>
+    <div id="profile">
+        <img src="{{ url_for('static', filename='assets/foto.png') }}" alt="Foto do perfil">
+    </div>
+    <div id="greeting">
+        Olá, Ana!😊
+    </div>
+
+    <form action="/cadastrar_release" method="POST">
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="ordem">Ordem:</label><br>
+        <input type="text" id="ordem" name="ordem" required><br><br>
+
+        <label for="data_inicio">Data de Início:</label><br>
+        <input type="date" id="data_inicio" name="data_inicio" required><br><br>
+
+        <label for="data_final">Data Final:</label><br>
+        <input type="date" id="data_final" name="data_final" required><br><br>
+
+        <input type="submit" value="Cadastrar Release">
+    </form>
+</body>
+</html>

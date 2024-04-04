@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Cadastrar Tarefa</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/novoProduto.css') }}">  
+</head>
+<body>
+    <div id="profile">
+        <img src="{{ url_for('static', filename='assets/foto.png') }}" alt="Foto do perfil">
+    </div>
+    <div id="greeting">
+        Olá, Ana!😊
+    </div>
+
+    <form action="/cadastrar_tarefa" method="POST">
+        <label for="descricao">Descrição da Tarefa:</label><br>
+        <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="historia">História de Usuário:</label><br>
+        <input type="text" id="historia" name="historia" required><br><br>
+
+        <label for="responsavel">Desenvolvedor responsável:</label><br>
+        <input type="text" id="responsavel" name="responsavel" required><br><br>
+
+        <input type="submit" value="Cadastrar Tarefa">
+    </form>
+</body>
+</html>

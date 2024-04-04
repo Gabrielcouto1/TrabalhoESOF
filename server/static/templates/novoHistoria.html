@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Cadastrar História</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/novoProduto.css') }}">  
+</head>
+<body>
+    <div id="profile">
+        <img src="{{ url_for('static', filename='assets/foto.png') }}" alt="Foto do perfil">
+    </div>
+    <div id="greeting">
+        Olá, Ana!😊
+    </div>
+
+    <form action="/cadastrar_historia" method="POST">
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="descricao">Descrição:</label><br>
+        <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="story_points">Valor do Story Points:</label><br>
+        <input type="text" id="story_points" name="story_points" required><br><br>
+
+        <label for="release">Release:</label><br>
+        <input type="text" id="release" name="release" required><br><br>
+
+        <label for="iteracao">Iteração (Sprint) da release:</label><br>
+        <input type="text" id="iteracao" name="iteracao" required><br><br>
+
+        <input type="submit" value="Cadastrar História">
+    </form>
+</body>
+</html>

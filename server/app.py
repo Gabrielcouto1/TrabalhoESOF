@@ -43,5 +43,22 @@ def xp():
 def novoRelatorio():
     return render_template("novoRelatorio.html")
 
+@app.route("/novoRelease")
+def novoRelease():
+    return render_template("novoRelease.html")
+
+@app.route("/novoIteracao")
+def novoIteracao():
+    return render_template("novoIteracao.html")
+
+@app.route("/novoHistoria")
+def novoHistoria():
+    return render_template("novoHistoria.html")
+
+
+@app.route("/novoTarefa")
+def novoTarefa():
+    return render_template("novoTarefa.html")
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
