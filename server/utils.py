@@ -60,3 +60,62 @@ def cadastraProduto(request):
 
     return jsonify({'message': True}), 200
 
+def cadastraTarefa(request):
+    data = load_data()
+
+    newTask ={
+        "description": request.form.get('descricao'),
+        "story": request.form.get('historia'),
+        "dev": request.form.get('responsavel')
+    }
+
+    data['xpTasks'].append(newTask)
+    save_data(data)
+
+    return jsonify({'message': True}), 200
+
+def cadastraHistoria(request):
+    data = load_data()
+
+    newStory ={
+        "storyTitle": request.form.get('titulo'),
+        "description": request.form.get('descricao'),
+        "storyPoints": request.form.get('story_points'),
+        "release": request.form.get('release'),
+        "iteration": request.form.get('iteracao')
+    }
+
+    data['xpStories'].append(newStory)
+    save_data(data)
+
+    return jsonify({'message': True}), 200
+
+def cadastraIteracao(request):
+    data = load_data()
+
+    newIteration ={
+        "release": request.form.get('release'),
+        "beginDate": request.form.get('data_inicio'),
+        "endDate": request.form.get('data_final')
+    }
+
+    data['xpIterations'].append(newIteration)
+    save_data(data)
+
+    return jsonify({'message': True}), 200
+
+def cadastraRelease(request):
+    data = load_data()
+
+    newRelease ={
+        "releaseTitle": request.form.get('titulo'),
+        "order": request.form.get('ordem'),
+        "beginDate": request.form.get('data_inicio'),
+        "endDate": request.form.get('data_final')
+    }
+
+    data['xpReleases'].append(newRelease)
+    save_data(data)
+
+    return jsonify({'message': True}), 200
+

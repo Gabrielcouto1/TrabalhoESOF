@@ -43,22 +43,34 @@ def xp():
 def novoRelatorio():
     return render_template("novoRelatorio.html")
 
-@app.route("/novoRelease")
+@app.route("/novoRelease", methods=['GET', 'POST'])
 def novoRelease():
-    return render_template("novoRelease.html")
+    if request.method == "GET":
+        return render_template("novoRelease.html")
+    elif request.method == "POST":
+        return utils.cadastraRelease(request)
 
-@app.route("/novoIteracao")
+@app.route("/novoIteracao", methods=['GET', 'POST'])
 def novoIteracao():
-    return render_template("novoIteracao.html")
+    if request.method == "GET":
+        return render_template("novoIteracao.html")
+    elif request.method == "POST":
+        return utils.cadastraIteracao(request)
 
-@app.route("/novoHistoria")
+@app.route("/novoHistoria", methods=['GET', 'POST'])
 def novoHistoria():
-    return render_template("novoHistoria.html")
+    if request.method == "GET":
+        return render_template("novoHistoria.html")
+    elif request.method == "POST":
+        return utils.cadastraHistoria(request)
 
 
-@app.route("/novoTarefa")
+@app.route("/novoTarefa", methods=['GET', 'POST'])
 def novoTarefa():
-    return render_template("novoTarefa.html")
+    if request.method == "GET":
+        return render_template("novoTarefa.html")
+    elif request.method == "POST":
+        return utils.cadastraTarefa(request)
 
 @app.route("/kanban")
 def kanban():

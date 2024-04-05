@@ -32,5 +32,28 @@
 
         <input type="submit" value="Cadastrar História">
     </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+    
+                var formData = new FormData(this);
+    
+                var xhr = new XMLHttpRequest();
+    
+                xhr.open('POST', '/novoHistoria', true);
+    
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        window.location.href = '/xp';
+                    } else {
+                        alert('Error: ' + xhr.status);
+                    }
+                };
+    
+                xhr.send(formData);
+            });
+        });
+    </script>
 </body>
 </html>

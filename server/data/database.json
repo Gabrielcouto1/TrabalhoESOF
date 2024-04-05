@@ -41,5 +41,59 @@
             "beginDate": "vfbvf",
             "endDate": "fgvrdvb"
         }
+    ],
+    "xpTasks": [
+        {
+            "description": "Criar rota do burndown graphic",
+            "story": "Criar Grafico burndown",
+            "dev": "Gabriel Couto"
+        },
+        {
+            "description": "descricao teste",
+            "story": "historia teste",
+            "dev": "gabriel"
+        }
+    ],
+    "xpStories": [
+        {
+            "storyTitle": "Criar grafico burndown",
+            "description": "Calcular o grafico burndown, plotar e enviar ao navegador.",
+            "storyPoints": "19",
+            "release": "Release 1",
+            "iteration": "Iteracao 1"
+        },
+        {
+            "storyTitle": "titulo teste",
+            "description": "descricao teste",
+            "storyPoints": "11",
+            "release": "release teste",
+            "iteration": "iteracao teste"
+        }
+    ],
+    "xpIterations": [
+        {
+            "release": "Release 1",
+            "beginDate": "05-04-2024",
+            "endDate": "10-04-2024"
+        },
+        {
+            "release": "release teste",
+            "beginDate": "2024-01-01",
+            "endDate": "2024-04-19"
+        }
+    ],
+    "xpReleases": [
+        {
+            "releaseTitle": "Release 1",
+            "order": "1",
+            "beginDate": "05-04-2024",
+            "endDate": "07-04-2024"
+        },
+        {
+            "releaseTitle": "titulo teste",
+            "order": "ordem teste",
+            "beginDate": "2024-04-11",
+            "endDate": "2024-04-12"
+        }
     ]
 }
