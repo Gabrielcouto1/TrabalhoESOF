@@ -1,4 +1,4 @@
-from flask import jsonify
+from flask import jsonify # type: ignore
 import os
 import json 
 

@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template, jsonify # type: ignore
 import utils
 
 app = Flask("_name_", template_folder=utils.template_dir)
